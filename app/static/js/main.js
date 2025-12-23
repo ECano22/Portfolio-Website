@@ -1,3 +1,7 @@
+function toggleSidebar()
+{
+
+}
 function toggleTheme()
 {
   const root = document.documentElement;
@@ -7,13 +11,19 @@ function toggleTheme()
 
   if (currentTheme === lightTheme)
   {
-    root.style.setProperty('--theme', '0%')
+    root.style.setProperty('--theme', darkTheme)
+    localStorage.setItem('theme', darkTheme);
   }
   else if (currentTheme === darkTheme)
   {
-    root.style.setProperty('--theme', '100%')
+    root.style.setProperty('--theme', lightTheme)
+    localStorage.setItem('theme', lightTheme);
   }
 }
+
+window.addEventListener('load', () => {
+  document.body.classList.remove('preload')
+})
 
 /*
 let t = 0;

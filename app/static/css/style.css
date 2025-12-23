@@ -1,57 +1,109 @@
 :root{
-    --lightTheme:100%;
-    --darkTheme:0%;
-    --theme: 100%; 
+    --lightTheme:1;
+    --darkTheme:0;
+    --theme: 1; 
     /*transition variable, used in javascript*/
-    --t: 100%;
+    --t: 1;
+    --transitions: .2s
 }
+
+.preload *{
+    transition:none !important;
+}
+
+/*
+seems to work inconsistently
+* {
+    transition: background-color var(--transitions) ease, color var(--transitions) ease, border-color var(--transitions) ease;
+}
+    */
+
 .header-container {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    padding: 10px 10px;
+    border-bottom: 3px solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
 }
 
-  .centered-title {
-    grid-column: 2; 
-    font-size: 1.5rem;
+.centered-title {
+    font-size: 5.5rem;
     font-weight: bold;
     margin: 0;
+    text-align: center;
 }
-.right-action {
+.centered-subtitle {
+    font-size: 3.0rem;
+    margin: 0;
+    text-align: center;
+}
+.subtitle-highlight {
+    display: block;
+    margin-top: 5px;
+    font-size: 75%;
+    line-height: 1.2;
+}
+.header-left-action {
+    grid-column: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+.header-right-action {
     grid-column: 3;
     display: flex;
     justify-content: flex-end;
 }
 header{
     text-align: center;
-    background-color: hsl(0, 0%, calc(0.00% + (var(--theme) * 1.00)));
+    background-color: hsl(0, 0%, calc(0.00% + (var(--theme) * 100%)));
 }
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     font-family: system-ui, sans-serif;
-    background-color: hsl(0, 0%, calc(0.00% + (var(--theme) * 1.00)));
+    background-color: hsl(0, 0%, calc(0% + (var(--theme) * 100%)));
+}
+main {
+    flex: 1;
 }
 footer {
-    text-align:center;
+    text-align: center;
+    padding-bottom: 5px;
+}
+button{
+    font-size: 3.0rem;
+    color: hsl(0, 0%, calc(95% - (var(--theme) * 90%)));
+    background-color: hsla(0, 0%, calc(90% - (var(--theme) * 90%)), 0);
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: hsl(0, 0%, calc(10% + (var(--theme) * 80%)));
+    border-style: solid;
+}
+button:hover{
+    background-color: hsla(0, 0%, calc(10% + (var(--theme) * 80%)), 1);
+    cursor: pointer;
+}
+.default-text{
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
 }
 
 h1 {
-    color:hsl(0, 0%, calc(95% - (var(--theme) * 0.9)));
+    color:hsl(0, 0%, calc(95% - (var(--theme) * 90%)));
 }
 h2 {
-    color:hsl(0, 0%, calc(80% - (var(--theme) * 0.6)));
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
 }
 h3 {
-    color:hsl(0, 0%, calc(80% - (var(--theme) * 0.6)));
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
 }
 h4 {
-    color:hsl(0, 0%, calc(80% - (var(--theme) * 0.6)));
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
 }
 h5 {
-    color:hsl(0, 0%, calc(80% - (var(--theme) * 0.6)));
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
 }
 h6 {
-    color:hsl(0, 0%, calc(10% + (var(--theme) * 0.8)));
+    color:hsl(0, 0%, calc(10% + (var(--theme) * 80%)));
 }

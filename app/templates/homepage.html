@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <head>
+    <style>
+        html {
+            visibility:hidden;
+        }
+    </style>
+    <title>Portfolio</title>
+    <script>
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme)
+        {
+            root.style.setProperty('--theme', savedTheme);
+        }
+        else
+        {
+            //eventually change this to system setting
+            root.style.setProperty('--theme', 1);
+        }
+        root.style.visibility = 'visible';
+    </script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
-    <title>Portfolio</title>
 </head>
-<header>
-    <div class="header-container">
-        <h1 class="centered-title">Erick Cano's Coding Portfolio</h1>
-        <div class ="right-action">
-            <button onclick="toggleTheme()">
-                click me!
-            </button>
+<body class = "preload">
+    <header>
+        <div class="header-container">
+            <div class ="header-left-action">
+                <button>
+                    &#9776;
+                </button>
+            </div>
+            <div class ="header-right-action">
+                <button onclick="toggleTheme()">
+                    click me!
+                </button>
+            </div>
         </div>
-    </div>
-</header>
-<body>
-    <h1>h1</h1>
-    <h2>h2</h2>
-    <h3>h3</h3>
-    <h4>h4</h4>
-    <h5>h5</h5>
-    <h6>h6</h6>
+    </header>
+    <main>
+        <h1 class="centered-title">Erick Cano</h1>
+        <h2 class="centered-subtitle">Aspiring Software Engineer
+            <span class="subtitle-highlight">C++ • Python • Fullstack</span>
+        </h1>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+    </main>
+    <footer>
+        <small class = "default-text">Copyright &copy; 2025 Erick Cano</small>
+    </footer>
 </body>
-<footer>
-    <h6>Copyright &copy; 2025 Erick Cano</h6>
-</footer>
