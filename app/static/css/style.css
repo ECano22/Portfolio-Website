@@ -1,0 +1,57 @@
+:root{
+    --lightTheme:100%;
+    --darkTheme:0%;
+    --theme: 100%; 
+    /*transition variable, used in javascript*/
+    --t: 100%;
+}
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+  .centered-title {
+    grid-column: 2; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+.right-action {
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+header{
+    text-align: center;
+    background-color: hsl(0, 0%, calc(0.00% + (var(--theme) * 1.00)));
+}
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background-color: hsl(0, 0%, calc(0.00% + (var(--theme) * 1.00)));
+}
+footer {
+    text-align:center;
+}
+
+h1 {
+    color:hsl(0, 0%, calc(95% - (var(--theme) * 0.9)));
+}
+h2 {
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 0.6)));
+}
+h3 {
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 0.6)));
+}
+h4 {
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 0.6)));
+}
+h5 {
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 0.6)));
+}
+h6 {
+    color:hsl(0, 0%, calc(10% + (var(--theme) * 0.8)));
+}
