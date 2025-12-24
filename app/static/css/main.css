@@ -1,0 +1,48 @@
+:root{
+    --lightTheme:1;
+    --darkTheme:0;
+    --theme: 1; 
+    /*transition variable, used in javascript*/
+    --t: 1;
+    --transitions: .2s;
+}
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px 10px;
+    border-bottom: 3px solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
+}
+.header-left-action {
+    grid-column: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+.header-right-action {
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+header{
+    text-align: center;
+    background-color: hsl(0, 0%, calc(0.00% + (var(--theme) * 100%)));
+}
+footer {
+    text-align: center;
+    padding-bottom: 5px;
+}
+button{
+    color: hsl(0, 0%, calc(95% - (var(--theme) * 90%)));
+    background-color: hsla(0, 0%, calc(90% - (var(--theme) * 90%)), 0);
+    border-style: solid;
+    border-color: hsl(0, 0%, calc(10% + (var(--theme) * 80%)));
+}
+.default-button{
+    font-size: 3.0rem;
+    border-radius: 10px;
+    border-width: 3px;
+}
+button:hover{
+    background-color: hsla(0, 0%, calc(10% + (var(--theme) * 80%)), 1);
+    cursor: pointer;
+}

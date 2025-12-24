@@ -1,44 +1,9 @@
 :root{
-    --lightTheme:1;
-    --darkTheme:0;
-    --theme: 1; 
-    /*transition variable, used in javascript*/
-    --t: 1;
-    --transitions: .2s;
     --footer-action-padding: 30px;
     --footer-button-width: 50vw;
     --footer-translate: 100px;
     --footer-border-radius: 1000px;
     --footer-containter-font-size:3rem;
-}
-
-.preload *{
-    transition:none !important;
-}
-
-/*
-seems to work inconsistently
-* {
-    transition: background-color var(--transitions) ease, color var(--transitions) ease, border-color var(--transitions) ease;
-}
-    */
-
-.header-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 10px 10px;
-    border-bottom: 3px solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
-}
-.header-left-action {
-    grid-column: 1;
-    display: flex;
-    justify-content: flex-start;
-}
-.header-right-action {
-    grid-column: 2;
-    display: flex;
-    justify-content: flex-end;
 }
 .footer-container {
     display: grid;
@@ -88,10 +53,6 @@ seems to work inconsistently
     font-size: 75%;
     line-height: 1.2;
 }
-header{
-    text-align: center;
-    background-color: hsl(0, 0%, calc(0.00% + (var(--theme) * 100%)));
-}
 body {
     overflow-x: hidden;
     width:100%;
@@ -106,25 +67,7 @@ body {
 main {
     flex: 1;
 }
-footer {
-    text-align: center;
-    padding-bottom: 5px;
-}
-button{
-    color: hsl(0, 0%, calc(95% - (var(--theme) * 90%)));
-    background-color: hsla(0, 0%, calc(90% - (var(--theme) * 90%)), 0);
-    border-style: solid;
-    border-color: hsl(0, 0%, calc(10% + (var(--theme) * 80%)));
-}
-.default-button{
-    font-size: 3.0rem;
-    border-radius: 10px;
-    border-width: 3px;
-}
-button:hover{
-    background-color: hsla(0, 0%, calc(10% + (var(--theme) * 80%)), 1);
-    cursor: pointer;
-}
+
 .default-text{
     color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
 }

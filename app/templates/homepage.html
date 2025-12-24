@@ -1,29 +1,31 @@
 {% extends "main.html" %}
-    {% block content %}
-        <h1 class="centered-title">Erick Cano</h1>
-        <h2 class="centered-subtitle">Aspiring Software Engineer
-            <span class="subtitle-highlight">C++ • Python • Fullstack</span>
-        </h1>
-        <h1>h1</h1>
-        <h2>h2</h2>
-        <h3>h3</h3>
-        <h4>h4</h4>
-        <h5>h5</h5>
-        <h6>h6</h6>
-    {% endblock %}
-    {% block footer %}
-    <div class = "footer-container">
-        <div class = "footer-left-action">
-            <a href="{{ url_for('projects') }}">
-                <button>
-                    View Projects
-                </button>
-            </a>
-        </div>
-        <div class = "footer-right-action">
+{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">{% endblock %}
+{% block title %}Portfolio{% endblock %}
+{% block content %}
+    <h1 class="centered-title">Erick Cano</h1>
+    <h2 class="centered-subtitle">Aspiring Software Engineer
+        <span class="subtitle-highlight">C++ • Python • Fullstack</span>
+    </h1>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+{% endblock %}
+{% block footer %}
+<div class = "footer-container">
+    <div class = "footer-left-action">
+        <a href="{{ url_for('projects') }}">
             <button>
-                About Me
+                View Projects
             </button>
-        </div>
+        </a>
     </div>
-    {% endblock %}
+    <div class = "footer-right-action">
+        <button>
+            About Me
+        </button>
+    </div>
+</div>
+{% endblock %}
