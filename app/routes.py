@@ -12,8 +12,8 @@ def projects():
         {
             "id": 0,
             "languages": ["C++"],
-            "title": "WorldGen - Console Tile Generator",
-            "shortdesc": "A procedural terrain generation engine that renders an infinite, explorable 2D world directly in the console.",
+            "title": "Console Tile Generator",
+            "desc": "A procedural terrain generation engine that renders an infinite, explorable 2D world directly in the console.",
             "infolink": None,
             "demolink": None,
             "sourcelink": "https://github.com/ECano22/Portfolio/tree/main/C%2B%2B/WorldGen"
@@ -22,7 +22,7 @@ def projects():
             "id": 1,
             "languages": ["Python"],
             "title": "Data-Driven Command-Line RPG",
-            "shortdesc": "A feature-complete, text-based RPG that simulates turn-based combat.",
+            "desc": "A feature-complete, text-based RPG that simulates turn-based combat.",
             "infolink": None,
             "demolink": None,
             "sourcelink": "https://github.com/ECano22/Portfolio/tree/main/Python/Turn-Based%20Game"
@@ -31,7 +31,7 @@ def projects():
             "id": 2,
             "languages": ["Python", "HTML", "CSS", "JavaScript"],
             "title": "Portfolio Website",
-            "shortdesc": "A website to host my portfolio projects.",
+            "desc": "A website to host my portfolio projects.",
             "infolink": None,
             "demolink": None,
             "sourcelink": "https://github.com/ECano22/Portfolio-Website"

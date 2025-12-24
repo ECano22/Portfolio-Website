@@ -1,0 +1,38 @@
+:root{
+    --project-columns: 3;
+    --card-gap-min: 1rem;
+    --card-gap-max: 2.5rem;
+    --card-gap-growth: 4vw;
+}
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    /*
+    max-width: calc((var(--project-columns) * 300px) + ((var(--project-columns) - 1) * clamp(var(--card-gap-min), var(--card-gap-growth), var(--card-gap-max))));
+    */
+    gap: clamp(var(--card-gap-min), var(--card-gap-growth), var(--card-gap-max));
+    padding: 20px 20px;
+    margin: 0 auto;
+   
+    
+}
+.project-card {
+    aspect-ratio: 1/1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 12px;
+    background-color: hsl(0, 0%, calc(var(--theme) * 100%));
+    border: 5px solid hsl(0, 0%, calc(15% + var(--theme) * 70%));
+    text-align: center;
+    line-height: 1.2;
+}
+.card-title{
+    font-size: 2rem;
+    margin-bottom: auto;
+}
+.card-desc{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}

@@ -1,1 +1,14 @@
 {% extends "main.html" %}
+{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">{% endblock %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+    <h1 class="centered-title">Projects</h1>
+    <main class="projects-grid">
+        {% for project in projects %}
+            <button class="project-card">
+                <h2 class="card-title">{{ project.title }}</h2>
+                <h3 class="card-desc">{{ project.desc }}</h3>
+            </button>
+        {% endfor %}
+    </main>
+{% endblock %}
