@@ -21,10 +21,6 @@ function toggleTheme()
   }
 }
 
-window.addEventListener('load', () => {
-  document.body.classList.remove('preload')
-})
-
 /*
 let t = 0;
 let light = document.documentElement.getPro

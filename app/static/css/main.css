@@ -27,6 +27,20 @@ header{
     text-align: center;
     background-color: hsl(0, 0%, calc(0.00% + (var(--theme) * 100%)));
 }
+body {
+    overflow-x: hidden;
+    width:100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background-color: hsl(0, 0%, calc(0% + (var(--theme) * 100%)));
+}
+main {
+    flex: 1;
+}
 footer {
     text-align: center;
     padding-bottom: 5px;
@@ -45,4 +59,42 @@ button{
 button:hover{
     background-color: hsla(0, 0%, calc(10% + (var(--theme) * 80%)), 1);
     cursor: pointer;
+}
+h1 {
+    color:hsl(0, 0%, calc(95% - (var(--theme) * 90%)));
+}
+h2 {
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
+}
+h3 {
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
+}
+h4 {
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
+}
+h5 {
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
+}
+h6 {
+    color:hsl(0, 0%, calc(10% + (var(--theme) * 80%)));
+}
+.default-text{
+    color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
+}
+.centered-title {
+    font-size: 5.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+.centered-subtitle {
+    font-size: 3.0rem;
+    margin: 0;
+    text-align: center;
+}
+.subtitle-highlight {
+    display: block;
+    margin-top: 5px;
+    font-size: 75%;
+    line-height: 1.2;
 }

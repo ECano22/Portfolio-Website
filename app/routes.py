@@ -38,3 +38,6 @@ def projects():
         },
     ]
     return render_template('projects.html', projects=projects)
+@app.route('/aboutme')
+def aboutme():
+    return render_template('aboutme.html')
