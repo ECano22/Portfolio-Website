@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        html {
+            visibility:hidden;
+        }
+    </style>
+    <title>Projects</title>
+    <script>
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme)
+        {
+            root.style.setProperty('--theme', savedTheme);
+        }
+        else
+        {
+            //eventually change this to system setting
+            root.style.setProperty('--theme', 1);
+        }
+        root.style.visibility = 'visible';
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>

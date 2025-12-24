@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        html {
+            visibility:hidden;
+        }
+    </style>
+    <title>Portfolio</title>
+    <script>
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme)
+        {
+            root.style.setProperty('--theme', savedTheme);
+        }
+        else
+        {
+            //eventually change this to system setting
+            root.style.setProperty('--theme', 1);
+        }
+        root.style.visibility = 'visible';
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body class = "preload">
+    <header>
+        <div class="header-container">
+            <div class ="header-left-action">
+                <button class = "default-button">
+                    &#9776;
+                </button>
+            </div>
+            <div class ="header-right-action">
+                <button class = "default-button" onclick="toggleTheme()">
+                    click me!
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        {% block footer %}{% endblock %}
+        <small class = "default-text">Copyright &copy; 2025 Erick Cano</small>
+    </footer>
+</body>

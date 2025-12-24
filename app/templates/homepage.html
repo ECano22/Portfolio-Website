@@ -1,44 +1,5 @@
-<!DOCTYPE html>
-<head>
-    <style>
-        html {
-            visibility:hidden;
-        }
-    </style>
-    <title>Portfolio</title>
-    <script>
-        const root = document.documentElement;
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme)
-        {
-            root.style.setProperty('--theme', savedTheme);
-        }
-        else
-        {
-            //eventually change this to system setting
-            root.style.setProperty('--theme', 1);
-        }
-        root.style.visibility = 'visible';
-    </script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
-</head>
-<body class = "preload">
-    <header>
-        <div class="header-container">
-            <div class ="header-left-action">
-                <button class = "default-button">
-                    &#9776;
-                </button>
-            </div>
-            <div class ="header-right-action">
-                <button class = "default-button" onclick="toggleTheme()">
-                    click me!
-                </button>
-            </div>
-        </div>
-    </header>
-    <main>
+{% extends "main.html" %}
+    {% block content %}
         <h1 class="centered-title">Erick Cano</h1>
         <h2 class="centered-subtitle">Aspiring Software Engineer
             <span class="subtitle-highlight">C++ • Python • Fullstack</span>
@@ -49,20 +10,20 @@
         <h4>h4</h4>
         <h5>h5</h5>
         <h6>h6</h6>
-    </main>
-    <footer>
-        <div class = "footer-container">
-            <div class = "footer-left-action">
+    {% endblock %}
+    {% block footer %}
+    <div class = "footer-container">
+        <div class = "footer-left-action">
+            <a href="{{ url_for('projects') }}">
                 <button>
                     View Projects
                 </button>
-            </div>
-            <div class = "footer-right-action">
-                <button>
-                    About Me
-                </button>
-            </div>
+            </a>
         </div>
-        <small class = "default-text">Copyright &copy; 2025 Erick Cano</small>
-    </footer>
-</body>
+        <div class = "footer-right-action">
+            <button>
+                About Me
+            </button>
+        </div>
+    </div>
+    {% endblock %}
