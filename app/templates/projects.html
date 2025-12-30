@@ -3,12 +3,16 @@
 {% block title %}Projects{% endblock %}
 {% block content %}
     <h1 class="centered-title">Projects</h1>
-    <main class="projects-grid">
-        {% for project in projects %}
-            <button class="project-card">
-                <h2 class="card-title">{{ project.title }}</h2>
-                <h3 class="card-desc">{{ project.desc }}</h3>
-            </button>
+    <div class="projects-grid">
+        {% for project_id, project in projects.items() %}
+            {% set img_url = url_for('static', filename='img/' ~ project.thumbnaillink) %}
+            {% set link_url = url_for('project_page', project_id = project_id) %}
+            <a class ="project-link" href = {{link_url}}>
+                <button class="project-card" style="background-image: url('{{ img_url }}');">
+                    <h2 class="card-title">{{ project.title }}</h2>
+                    <h3 class="card-desc">{{ project.shortdesc }}</h3>
+                </button>
+            </a>
         {% endfor %}
-    </main>
+        </div>
 {% endblock %}

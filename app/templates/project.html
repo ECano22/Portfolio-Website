@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">{% endblock %}
+{% block title %}{{project.title}}{% endblock %}
+{% block content %}
+    <div class="divide">
+        <div class="main-left">
+            <img src="{{url_for('static', filename='img/' ~ project.imglink)}}" alt="Project Image">
+            <h2> {{project.languages | join(', ')}}</h2>
+        </div>
+        <div class="main-right">
+            <h1 class="centered-title">{{project.title}}</h1>
+            {{project.desc}}
+        </div>
+    </div>
+{% endblock %}

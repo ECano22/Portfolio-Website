@@ -1,0 +1,24 @@
+:root {
+    --first-column-size: 25vw;
+    --divide-width: 5px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+.divide{
+    display: grid;
+    grid-template-columns: var(--first-column-size) 1fr;
+    padding: 0px 10px;
+    flex: 1;
+}
+
+.divide > *:not(:last-child) {
+    border-right: 5px solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
+}
+.main-left{
+    grid-column: 1;
+}
+.main-right{
+    grid-column: 2;
+}

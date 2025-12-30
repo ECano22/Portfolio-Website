@@ -3,6 +3,7 @@
     --card-gap-min: 1rem;
     --card-gap-max: 2.5rem;
     --card-gap-growth: 4vw;
+    --card-hover-offset: 20px;
 }
 .projects-grid{
     display: grid;
@@ -11,7 +12,7 @@
     max-width: calc((var(--project-columns) * 300px) + ((var(--project-columns) - 1) * clamp(var(--card-gap-min), var(--card-gap-growth), var(--card-gap-max))));
     */
     gap: clamp(var(--card-gap-min), var(--card-gap-growth), var(--card-gap-max));
-    padding: 20px 20px;
+    padding: 50px 20px;
     margin: 0 auto;
    
     
@@ -24,9 +25,20 @@
     justify-content: flex-end;
     border-radius: 12px;
     background-color: hsl(0, 0%, calc(var(--theme) * 100%));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: 5px solid hsl(0, 0%, calc(15% + var(--theme) * 70%));
     text-align: center;
     line-height: 1.2;
+}
+.project-card:hover {
+    transform: translateY(calc(-1 * var(--card-hover-offset)));
+    filter:brightness(1.2);
+}
+.project-link {
+    text-decoration: none;
+    color: inherit;
 }
 .card-title{
     font-size: 2rem;
