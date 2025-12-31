@@ -5,13 +5,15 @@
     /*transition variable, used in javascript*/
     --t: 1;
     --transitions: .2s;
+    --border-width: 3px;
+    --copyright-border-width: 1px;
 }
 .header-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 10px 10px;
-    border-bottom: 3px solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
+    border-bottom: var(--border-width) solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
 }
 .header-left-action {
     grid-column: 1;
@@ -84,7 +86,7 @@ h6 {
     color:hsl(0, 0%, calc(80% - (var(--theme) * 60%)));
 }
 .centered-title {
-    font-size: 5.5rem;
+    font-size: 4rem;
     font-weight: bold;
     margin: 0;
     text-align: center;
@@ -99,4 +101,9 @@ h6 {
     margin-top: 5px;
     font-size: 75%;
     line-height: 1.2;
+}
+.copyright {
+    display: block;
+    border-top: var(--copyright-border-width) solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
+    width: 100vw;
 }

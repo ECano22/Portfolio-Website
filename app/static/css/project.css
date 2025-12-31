@@ -1,6 +1,5 @@
 :root {
     --first-column-size: 25vw;
-    --divide-width: 5px;
 }
 main{
     display: flex;
@@ -12,9 +11,20 @@ main{
     padding: 0px 10px;
     flex: 1;
 }
+.projectimg{
+    max-width:100%
+}
+.description{
+    font-size: 1.25rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
 
 .divide > *:not(:last-child) {
-    border-right: 5px solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
+    border-right: var(--border-width) solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
+}
+.divide > * {
+    padding: 10px 20px;
 }
 .main-left{
     grid-column: 1;

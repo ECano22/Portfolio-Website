@@ -1,0 +1,6 @@
+This project is a C++ console application that demonstrates procedural world generation using a chunk-based system. It generates an infinite, explorable 2D terrain directly in the console window, utilizing noise algorithms to create organic terrain patterns. The application renders a viewport of the world based on the console window's size. As the player moves (using WASD or arrow keys), the engine calculates which chunks are visible. If a chunk exists in memory, it is rendered; if not, it is procedurally generated using FastNoise and cached.
+
+In the rendered console viewport:
+-(") represents grass
+-(~) represents water
+-(@) represents the player

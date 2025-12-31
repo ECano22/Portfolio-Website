@@ -4,12 +4,14 @@
 {% block content %}
     <div class="divide">
         <div class="main-left">
-            <img src="{{url_for('static', filename='img/' ~ project.imglink)}}" alt="Project Image">
-            <h2> {{project.languages | join(', ')}}</h2>
+            <img class ="projectimg" src="{{url_for('static', filename='img/' ~ project.imglink)}}" alt="Project Image">
+            <h2> Languages: {{project.languages | join(', ')}}</h2>
         </div>
         <div class="main-right">
             <h1 class="centered-title">{{project.title}}</h1>
-            {{project.desc}}
+            <pre class="default-text description">{{project.desc}}</pre>
+            <h1 class="default-text">Skills & Concepts Demonstrated</h1>
+            <pre class="default-text description">{{project.features}}</pre>
         </div>
     </div>
 {% endblock %}

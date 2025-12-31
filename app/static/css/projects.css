@@ -14,15 +14,19 @@
     gap: clamp(var(--card-gap-min), var(--card-gap-growth), var(--card-gap-max));
     padding: 50px 20px;
     margin: 0 auto;
+    position: relative;
+    justify-items: center;
    
     
 }
-.project-card {
+.project-card, .project-link {
     aspect-ratio: 1/1;
-    width: 100%;
+    width: min(100%, 60vh);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+.project-card{
     border-radius: 12px;
     background-color: hsl(0, 0%, calc(var(--theme) * 100%));
     background-size: cover;
