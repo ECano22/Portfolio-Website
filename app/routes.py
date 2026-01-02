@@ -15,9 +15,9 @@ PROJECTS = {
     },
     "Portfolio-Website": {
         "title": "Portfolio Website",
-        "imglink": "",
+        "imglink": "portfoliowebsiteimage.png",
         "languages": ["Python", "HTML", "CSS", "JavaScript"],
-        "desctxt": "portfolio",
+        "desctxt": "portfoliowebsite",
         "githubLink": "https://github.com/ECano22/Portfolio-Website",
         "shortdesc": "A website to host my portfolio projects.",
         "pagelink": "",

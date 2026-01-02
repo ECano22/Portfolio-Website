@@ -6,20 +6,6 @@
         }
     </style>
     <title>{% block title %}{% endblock %}</title>
-    <script>
-        const root = document.documentElement;
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme)
-        {
-            root.style.setProperty('--theme', savedTheme);
-        }
-        else
-        {
-            //eventually change this to system setting
-            root.style.setProperty('--theme', 1);
-        }
-        root.style.visibility = 'visible';
-    </script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
     {% block styles %}{% endblock %}
@@ -28,13 +14,13 @@
     <header>
         <div class="header-container">
             <div class ="header-left-action">
-                <button class = "default-button">
+                <button class = "default-button symbol">
                     &#9776;
                 </button>
             </div>
             <div class ="header-right-action">
-                <button class = "default-button" onclick="toggleTheme()">
-                    click me!
+                <button id ="theme" class = "default-button symbol" onclick="toggleTheme()">
+                    test
                 </button>
             </div>
         </div>
@@ -47,3 +33,32 @@
         <small class = "default-text copyright">Copyright &copy; 2025 Erick Cano</small>
     </footer>
 </body>
+
+<script>
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    const sunUnicode = getComputedStyle(root).getPropertyValue('--sunUnicode')
+    const moonUnicode = getComputedStyle(root).getPropertyValue('--moonUnicode')
+
+    if (savedTheme)
+    {
+        root.style.setProperty('--theme', savedTheme);
+        if (savedTheme == 1)
+        {
+            document.getElementById("theme").innerHTML = moonUnicode;
+            root.style.setProperty('--currentUnicode', moonUnicode);
+        }
+        else
+        {
+            document.getElementById("theme").innerHTML = sunUnicode;
+            root.style.setProperty('--currentUnicode', sunUnicode);
+        }
+    }
+    else
+    {
+        //eventually change this to system setting
+        root.style.setProperty('--theme', 1);
+        root.style.setProperty('--currentUnicode', sunUnicode)
+    }
+    root.style.visibility = 'visible';
+</script>

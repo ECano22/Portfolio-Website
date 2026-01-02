@@ -2,6 +2,9 @@
     --lightTheme:1;
     --darkTheme:0;
     --theme: 1; 
+    --sunUnicode: &#9728;
+    --moonUnicode: &#9789;
+    --currentUnicode: &#9728;
     /*transition variable, used in javascript*/
     --t: 1;
     --transitions: .2s;
@@ -24,6 +27,14 @@
     grid-column: 2;
     display: flex;
     justify-content: flex-end;
+}
+.symbol {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
 }
 header{
     text-align: center;

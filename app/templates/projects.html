@@ -9,7 +9,7 @@
             {% set link_url = url_for('project_page', project_id = project_id) %}
             <a class ="project-link" href = {{link_url}}>
                 <button class="project-card" style="background-image: url('{{ img_url }}');">
-                    <h2 class="card-title">{{ project.title }}</h2>
+                    <h2 class="card-title top-text">{{ project.title }}</h2>
                     <h3 class="card-desc">{{ project.shortdesc }}</h3>
                 </button>
             </a>

@@ -1,0 +1,1 @@
+This project is a full-stack web application built to showcase my portfolio projects. It includes dynamic pages for each project, a responsive layout, and integration with Python Flask for server-side logic. Users can browse project descriptions, view thumbnails, and see the skills and concepts demonstrated in each project.

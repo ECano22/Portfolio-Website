@@ -1,0 +1,5 @@
+-Python & Flask (server-side rendering, routing, template management)
+-HTML, CSS, and JavaScript (responsive layout, styling, interactive elements)
+-Dynamic template rendering with Jinja2
+-Organizing static assets (CSS, JS, images) for a web project
+-Project structure and code modularization for maintainability

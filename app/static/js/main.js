@@ -8,15 +8,21 @@ function toggleTheme()
   const currentTheme = getComputedStyle(root).getPropertyValue('--theme');
   const lightTheme = getComputedStyle(root).getPropertyValue('--lightTheme');
   const darkTheme = getComputedStyle(root).getPropertyValue('--darkTheme');
+  const sunUnicode = getComputedStyle(root).getPropertyValue('--sunUnicode');
+  const moonUnicode = getComputedStyle(root).getPropertyValue('--moonUnicode');
 
   if (currentTheme === lightTheme)
   {
-    root.style.setProperty('--theme', darkTheme)
+    root.style.setProperty('--theme', darkTheme);
+    document.getElementById("theme").innerHTML = sunUnicode;
+    root.style.setProperty('--currentUnicode', sunUnicode);
     localStorage.setItem('theme', darkTheme);
   }
   else if (currentTheme === darkTheme)
   {
-    root.style.setProperty('--theme', lightTheme)
+    root.style.setProperty('--theme', lightTheme);
+    document.getElementById("theme").innerHTML = moonUnicode;
+    root.style.setProperty('--currentUnicode', moonUnicode);
     localStorage.setItem('theme', lightTheme);
   }
 }
