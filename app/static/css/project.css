@@ -8,7 +8,7 @@ main{
 .divide{
     display: grid;
     grid-template-columns: var(--first-column-size) 1fr;
-    padding: 0px 10px;
+    padding: 40px 10px 0px;
     flex: 1;
 }
 .projectimg{
@@ -21,7 +21,7 @@ main{
 }
 
 .divide > *:not(:last-child) {
-    border-right: var(--border-width) solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
+    border-right: var(--copyright-border-width) solid hsl(0, 0%, calc(85% - var(--theme) * 70%));
 }
 .divide > * {
     padding: 10px 20px;

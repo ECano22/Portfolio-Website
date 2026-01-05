@@ -1,14 +1,13 @@
 :root{
     --project-columns: 3;
     --card-gap-min: 1rem;
-    --card-gap-max: 2.5rem;
-    --card-gap-growth: 4vw;
+    --card-gap-max: 1rem;
+    --card-gap-growth: 1vw;
     --card-hover-offset: 20px;
 }
 .projects-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: clamp(var(--card-gap-min), var(--card-gap-growth), var(--card-gap-max));
     padding: 50px 20px;
     margin: 0 auto;
     position: relative;

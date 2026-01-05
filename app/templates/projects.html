@@ -2,7 +2,7 @@
 {% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">{% endblock %}
 {% block title %}Projects{% endblock %}
 {% block content %}
-    <h1 class="centered-title">Projects</h1>
+    <h1 class="centered title">Projects</h1>
     <div class="projects-grid">
         {% for project_id, project in projects.items() %}
             {% set img_url = url_for('static', filename='img/' ~ project.thumbnaillink) %}

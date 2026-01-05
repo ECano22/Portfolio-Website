@@ -1,1 +1,48 @@
 {% extends "main.html" %}
+{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='css/aboutme.css') }}">{% endblock %}
+{% block title %}About Me{% endblock %}
+{% block content %}
+    <h1 class="centered title">About Me</h1>
+    <h2 class="subtitle">Background</h2>
+    <p class="subtitle-highlight">I'm Erick Cano, a Computer Science student at Oregon State University with a deep curiosity for how complex software works under the hood. I enjoy building projects that range from procedural world generation in C++ to interactive, full-stack web applications using Python and Flask. Whether I’m configuring Linux servers or experimenting with new game mechanics, I love the challenge of solving technical puzzles through code. Right now, I'm focused on sharpening my skills in systems programming and modern web technologies as I work toward a career in software engineering.</p>
+    <h2 class="subtitle">Skills</h2>
+    <div class="subtitle-highlight">
+        <h3>Languages</h3>
+        <ul>
+            <li>Python, C, C++, C#, JavaScript, SQL</li>
+        </ul>
+        <h3>Web Development</h3>
+        <ul>
+            <li>Full-stack development with Python and Flask</li>
+            <li>Frontend: Responsive design using HTML, CSS, and Jinja2 templates</li>
+            <li>Experience with dynamic routing and local storage for user preferences</li>
+        </ul>
+        <h3>Systems & Tools</h3>
+        <ul>
+            <li>Version Control: Git and GitHub</li>
+            <li>Operating Systems: Linux (Raspbian), Windows, and Mac</li>
+            <li>Development Environments: Visual Studio</li>
+            <li>Network Security: Server hardening with iptables and port forwarding</li>
+        </ul>
+    </div>
+    <h2 class="subtitle">What I Enjoy Building</h2>
+    <div class="subtitle-highlight">
+        <h3>Game Systems</h3>
+        <ul>
+            <li>Recreating and experimenting with gameplay systems inspired by games I’ve played.</li>
+        </ul>
+        <h3>Backend Atchitecture</h3>
+        <ul>
+            <li>Focusing on the technical side of software development, including logic, structure, and data flow.</li>
+        </ul>
+    </div>
+    <h2 class="subtitle">How I Work</h2>
+    <ul class="subtitle-highlight">
+        <li>Hands-On Implementation: I prefer to jump into the codebase early to build a functional prototype, which helps to identify real-world constraints quickly.</li>
+        <li>Problem-Solving: When I hit a technical roadblock, I look into and identify different ways the problem can be solved, choosing the most efficent solution for the task at hand.</li>
+        <li>Modular Building: To make troubleshooting easier, I focus on building modular project structures. This ensures that when a problem is being fixed in one area, the rest of the system remains maintainable.</li>
+        <li>Continuous Refinement: My workflow is a cycle of building, breaking, and refining. I am not afraid to refactor my code if a better solution exists.</li>
+    </ul>
+    <h2 class="subtitle">What I'm Looking For</h2>
+    <p class="subtitle-highlight">I am currently seeking a Computer Science Internship for Summer 2026 where I can contribute to meaningful projects while expanding my technical toolkit. Having spent my time building personal projects, I am eager to transition into a professional environment to see how large-scale software is built, tested, and deployed.</p>
+{% endblock %}

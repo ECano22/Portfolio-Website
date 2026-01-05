@@ -1,0 +1,15 @@
+main{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.subtitle-highlight h3 {
+    margin-top:0rem;
+    margin-bottom:0rem;
+}
+.subtitle-highlight, .subtitle-highlight > * {
+    margin-top:0rem;
+    margin-bottom:1rem;
+}
+.subtitle-highlight li {
+    margin-bottom: 0rem;
+}
