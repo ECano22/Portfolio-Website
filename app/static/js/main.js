@@ -1,7 +1,3 @@
-function toggleSidebar()
-{
-
-}
 function toggleTheme()
 {
   const root = document.documentElement;
@@ -25,6 +21,17 @@ function toggleTheme()
     root.style.setProperty('--currentUnicode', moonUnicode);
     localStorage.setItem('theme', lightTheme);
   }
+}
+
+document.getElementById("sidebarToggle").onclick = () => sidebarToggle()
+document.getElementById("sidebarBackgroundToggle").onclick = () => sidebarToggle()
+
+function sidebarToggle()
+{
+  const sidebar = document.querySelector(".sidebar");
+  const sidebardim =document.querySelector(".sidebar-dim")
+  sidebar.classList.toggle("open");
+  sidebardim.classList.toggle("visible");
 }
 
 /*

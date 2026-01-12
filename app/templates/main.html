@@ -11,16 +11,24 @@
     {% block styles %}{% endblock %}
 </head>
 <body>
+    <aside class="sidebar">
+        <h1 class="centered">Test</h1>
+        <h2><a href="{{ url_for('homepage') }}">Home</a></h2>
+    </aside>
+    <aside>
+        <div id="sidebarBackgroundToggle" class="sidebar-dim">
+        </div>
+    </aside>
     <header>
         <div class="header-container">
             <div class ="header-left-action">
-                <button class = "default-button symbol">
+                <button id="sidebarToggle" class = "default-button symbol">
                     &#9776;
                 </button>
             </div>
             <div class ="header-right-action">
                 <button id ="theme" class = "default-button symbol" onclick="toggleTheme()">
-                    test
+                    <!--This should be set to the default theme on first opening-->
                 </button>
             </div>
         </div>

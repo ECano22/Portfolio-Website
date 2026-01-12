@@ -10,6 +10,7 @@
     --transitions: .2s;
     --border-width: 3px;
     --copyright-border-width: 1px;
+    --sidebar-width: 300px;
 }
 .header-container {
     display: grid;
@@ -35,6 +36,40 @@
     width: 4rem;
     height: 4rem;
     padding: 0.5rem;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: calc(-1 * var(--sidebar-width));
+    height: 100%;
+    width: var(--sidebar-width);
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: hsl(0, 0%, calc(0% + (var(--theme) * 100%)));
+    transition: all var(--transitions) ease;
+    z-index: 11;
+
+}
+.sidebar.open{
+    left:0;
+}
+.sidebar-dim{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0%;
+    transition: all var(--transitions) ease;
+    z-index: 10;
+    visibility: hidden;
+}
+.sidebar-dim.visible{
+    visibility: visible;
+    opacity: 50%;
 }
 header{
     text-align: center;
