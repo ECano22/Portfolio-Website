@@ -5,7 +5,7 @@ It showcases my projects, skills, and provides a small interactive interface for
 
 ## Live Demo
 
-Note: Hosted on Render’s free tier, so the first load may take ~60 seconds due to inactivity. If buttons or pages don’t respond immediately, try refreshing.
+Note: Hosted on Render’s free tier, so the first load may take ~60 seconds due to inactivity. If buttons or pages don’t respond immediately, refreshing usually fixes the issue.
 
 [View Live Demo](https://portfolio-website-zzy6.onrender.com/homepage)
 
